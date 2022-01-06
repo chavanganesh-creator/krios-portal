@@ -17,6 +17,8 @@
 <!-- FontAwesome Styles-->
 <link href="assets/css/font-awesome.css" rel="stylesheet" />
 <!-- Morris Chart Styles-->
+<link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.2.0/css/all.css'>
+
 <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
 <!-- Custom Styles-->
 <link href="assets/css/custom-styles.css" rel="stylesheet" />
@@ -83,74 +85,87 @@ tr.header {
 		<jsp:include page="./components/financeNavbar.jsp" />
 	</div>
 	<div
-		style="position: absolute; left: 70px; top: 60px; padding-top: 6px; padding-bottom: 6px;"
+		style="position: absolute; left: 70px; top: 60px; padding-top: 6px; padding-bottom: 16px;"
 		id="mydiv">
 		<font color="black" style="font-family: sans-serif; font-size: 15px;">&nbsp&nbsp
 			EMPLOYEE PROFILES</font>
-
+        <div class="container "
+			style="position: absolute;  top: 2px;">
+			          <i class="glyphicon glyphicon-search" style="position:absolute;top:1px;float:right;padding: 5px;margin-left: 94%;font-size:26px;color:gray;"></i>
+			<input type="search" style="float:right;padding:6px; border:2px solid gray;border-radius:4px;" placeholder=" Search for Employee" id="myInput"
+				onkeyup="myFunction()">
+		</div>
 	</div>
 
-	<div id="mydiv" style="position: absolute; left: 70px; top: 97px;">
+	<div id="mydiv" style="position: absolute; left: 70px; top: 109px;">
 	<form action="sortUserList" method="post">
-		<table class="table table-hover">
+		<table class="table table-hover" style="margin-bottom:-16px" >
 			<thead>
-				<tr>
-					<!--  <td align="center">Show&nbsp;&nbsp; <select class="input100"
-						style="padding: 7px; border-radius: 5px;" name="role">
-							<option value="five">5</option>
-							<option value="ten">10</option>
-							<option value="fifteen">15</option>
-							<option value="twenty">20</option>
-							<option value="twentyfive">25</option>
-					</select> <span class="focus-input100"></span> &nbsp;&nbsp;&nbsp;Entries
-					</td>-->
+				<tr >
+					
 
-					<td align="center"><i class="fa fa-filter"
-						style="font-size: 25px"></i> Status &nbsp;&nbsp; <select
-						class="input100" style="padding: 7px; border-radius: 5px;"
+					<td style="margin-top:2px"><i class="fa fa-filter"
+						style="font-size: 18px;color:gray;margin-top:2px"></i> &nbsp;&nbsp;Status &nbsp;&nbsp; <select
+						class="input100" style="padding: 7px;border-radius: 5px;padding-bottom: 14px;padding-top: 1px;"
 						name="uploadStatus">
 
 							<option value="any">Any</option>
 							<option value="pending">Pending</option>
 							<option value="completed">Completed</option>
 					</select> <span class="focus-input100"></span></td>
-					<td align="center">
-						<div>
-							<i class="fa fa-calendar" style="font-size: 25px"></i> Date
-							&nbsp;&nbsp; <input style="border-radius: 5px;" type="month"
+					<td>
+						<div >
+							<i class="fa fa-calendar" style="font-size: 18px;color:gray;margin-top:1px "></i>&nbsp;&nbsp; Date
+							&nbsp;&nbsp; <input style="border-radius: 5px;border:1px solid gray; padding:6px" type="month"
 								id="start" name="uploadDate"  value="${todaysDate}" required="required">
-						</div>
+							<button style="top: 2px;
+    background-color: green;
+    border: 1px solid gray;
+    border-radius: 4px;
+    color: white;">&nbsp;&nbsp; <span class="material-icons" style="margin-top: -3px;margin-bottom: 13px;">published_with_changes</span></button>
+                        </div>
 					</td>
 					<td align="center">
 						<div>
-							<button> Get User List </button>
 						</div>
 					</td>
-					<td align="center">
-						<div class="col input-group mb-3" style="padding: 3px;">
-							<input type="text" id="myInput" onkeyup="myFunction()"
-								placeholder="Search for names.." title="Type in a name"
-								style="width: 215px; height: 38px;">
+					<td  >
+						<div class="col input-group mb-3" style="margin-top: -12px;">
+
+                             <ul class="pagination" >
+                                                            <li class="page-item" > <span aria-hidden="true" style="background-color:gray;color:white">Total Employee</span>
+                                                             </li>
+
+                                                            <li class="page-item">  <span aria-hidden="true" style="color:black">${userCount}</span>
+                                                             </li>
+                              </ul>&nbsp;&nbsp;
+                               <ul class="pagination" style="">
+                                                              <li class="page-item"> <span aria-hidden="true" style="background-color:#DB4437;color:white">Attendance Pending</span>
+                                                               </li>
+                                                              <li class="page-item">  <span aria-hidden="true" style="color:#DB4437">${pendingCount}</span>
+                                                               </li>
+                                </ul>&nbsp;&nbsp;
+                                 <ul class="pagination" style="">
+                                         <li class="page-item"> <span aria-hidden="true" style="background-color:green;color:white">Attendance Shared</span>
+                                         </li>
+
+                                         <li class="page-item"> <span aria-hidden="true" style="color:green"">${completedCount}</span>
+                                          </li>
+                                 </ul>&nbsp;&nbsp;
+
+
 						</div>
 					</td>
+
+
 				</tr>
-				<tr>
-					<td align="center">Total Employees : &nbsp;&nbsp; 
-						${userCount}
-					</td>
-					<td align="center">Attendance Shared By : &nbsp;&nbsp; 
-						${completedCount}
-					</td>
-					<td align="center">Attendance Pending of : &nbsp;&nbsp; 
-						${pendingCount}
-					</td>
-				</tr>
+
 		</table>
 		</form>
 		<table class="table table-hover"
 			style="background-color: white; size: 14px;" id="myTable">
 			<thead>
-				<tr class="header">
+				<tr class="header" style="background-color: #36C5F0;">
 					<th style="font-weight: bold;">#</th>
 					<th style="font-weight: bold;">Name</th>
 					<th style="font-weight: bold;">Email</th>
@@ -168,10 +183,8 @@ tr.header {
 						<td>${user.getEmail()}</td>
 
 						<td align="center"><a
-							href="/financeUserInfo/${user.getUserid()}"><button
-									name="editbtn" class="btn col align-items-center">
-									<i class="fa fa-eye"></i>
-								</button></a></td>
+							href="/financeUserInfo/${user.getUserid()}"><button class="btn btn-tab">
+									<span class="glyphicon glyphicon-eye-open"></span></button></a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

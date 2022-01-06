@@ -9,10 +9,10 @@
 		<version>2.5.8-SNAPSHOT</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.spartenportal</groupId>
-	<artifactId>Spartan-Portal</artifactId>
+	<groupId>com.kriosportal</groupId>
+	<artifactId>Krios-Portal</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Spartan-Portal</name>
+	<name>Krios-Portal</name>
 	<description>Demo project for Spring Boot</description>
 	<dependencies>
 		<dependency>

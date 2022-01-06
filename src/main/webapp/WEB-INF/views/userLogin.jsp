@@ -8,18 +8,30 @@
 <html lang="en">
 <head>
 <title>User Login</title>
-<link rel="icon" href="../images/Krios-icon-header.png"
-	type="image/icon type">
-<meta charset="UTF-8">
+<link rel="icon" href="../images/Krios-icon-header.png" type="image/icon type">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
+
 <!-- Bootstrap Styles-->
 <link href="assets/css/bootstrap.css" rel="stylesheet" />
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
+<!-- FontAwesome Styles-->
+<link href="assets/css/font-awesome.css" rel="stylesheet" />
+<!-- Morris Chart Styles-->
+<link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+<!-- Custom Styles-->
+<link href="assets/css/custom-styles.css" rel="stylesheet" />
+<!-- Google Fonts-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans'
+	rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="assets/js/Lightweight-Chart/cssCharts.css">
 <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
 
