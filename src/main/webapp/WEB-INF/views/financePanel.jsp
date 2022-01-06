@@ -4,7 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Finance-Dashboard</title>
-<link rel="icon" href="./images/Krios-icon-header.png" type="image/icon type">
+ <link rel = "icon" href ="https://www.kriosispl.com/assets/images/brand_logo.png"
+            type = "image/x-icon">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -37,7 +38,7 @@ body{
 	</div>
 	<div style="position: absolute; left: 150px; top: 250px;">
 	<font color="White" size="30px"><b>Welcome To Krios Portal</b><br>
-	<sub style="margin-left:35%">-Finance Department</sub>
+	<sub style="margin-left:34%">-Finance Department</sub>
 	</font>
 
 	</div>
