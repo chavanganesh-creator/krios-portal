@@ -34,7 +34,7 @@ public class DocumentsServiceImpl implements DocumentsService {
 
 	@Override
 	public boolean saveFile(MultipartFile file ,DocsBean docsBean , User user) {
-		String uploadDir = "E:\\Uploaded Documents";
+		String uploadDir = "A:\\Uploaded Documents";
 		uploadDir =uploadDir+File.separator+user.getFirstName()+" "+user.getMiddleName()+" "+user.getLastName();
 		boolean flag = false;
 		try {

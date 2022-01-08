@@ -105,8 +105,11 @@ tr.header {
 					
 
 					<td style="margin-top:2px"><i class="fa fa-filter"
-						style="font-size: 18px;color:gray;margin-top:2px"></i> &nbsp;&nbsp;Status &nbsp;&nbsp; <select
-						class="input100" style="padding: 7px;border-radius: 5px;padding-bottom: 14px;padding-top: 1px;"
+						style="font-size: 18px;color:gray;margin-top: 5px;"></i>
+					</td>
+					<td style="   padding-top: 14px;">  Status </td>
+					<td>
+					 <select class="input100" style="padding-left: 10px;padding-right: 0px;border-radius: 5px;padding-bottom: 9px;padding-top: 8px;"
 						name="uploadStatus">
 
 							<option value="any">Any</option>
@@ -114,23 +117,23 @@ tr.header {
 							<option value="completed">Completed</option>
 					</select> <span class="focus-input100"></span></td>
 					<td>
-						<div >
-							<i class="fa fa-calendar" style="font-size: 18px;color:gray;margin-top:1px "></i>&nbsp;&nbsp; Date
-							&nbsp;&nbsp; <input style="border-radius: 5px;border:1px solid gray; padding:6px" type="month"
+ 							<i class="fa fa-calendar" style="font-size: 18px;color:gray;margin-top:5px "></i>
+					</td>
+					<td style="padding-top:16px">
+                         Date
+					</td>
+					<td>
+					<input style="border-radius: 5px;border:1px solid gray; padding:6px;margin-top: 1px;" type="month"
 								id="start" name="uploadDate"  value="${todaysDate}" required="required">
-							<button style="top: 2px;
-    background-color: green;
-    border: 1px solid gray;
-    border-radius: 4px;
-    color: white;">&nbsp;&nbsp; <span class="material-icons" style="margin-top: -3px;margin-bottom: 13px;">published_with_changes</span></button>
-                        </div>
 					</td>
-					<td align="center">
-						<div>
-						</div>
+					<td>
+							<button style="background-color: green;border: 1px solid gray;border-radius: 4px;color: white;margin-top:1px;margin-left: -33px;">&nbsp;&nbsp; <span class="material-icons"
+							style="    margin-top: 2px;margin-bottom: -27px;margin-left: -8px;">published_with_changes</span></button>
+
 					</td>
-					<td  >
-						<div class="col input-group mb-3" style="margin-top: -12px;">
+
+					<td>
+						<div class="col input-group mb-3" style="margin-top: -20px;float:right">
 
                              <ul class="pagination" >
                                                             <li class="page-item" > <span aria-hidden="true" style="background-color:gray;color:white">Total Employee</span>
