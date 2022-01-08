@@ -130,7 +130,9 @@ function TriggerAlertClose() {
 			<div class="wrap-login100">
 				<form class="login100-form validate-form p-l-55 p-r-55 p-t-178"
 					action="checklogin" method="post">
-					<span class="login100-form-title">LOGIN</span> 
+					<span class="login100-form-title">LOGIN</span>
+
+
 					<p style=" position: absolute !important; margin-top: -45px;"><c:set var = "message" scope="page" value = "${message}"/>
       <c:if test = "${not empty message}">
 <div class="alert alert-success" role="alert" style="width: 300px;  position: absolute !important; margin-top: -36px;">
@@ -143,6 +145,7 @@ ${message}
 ${wrongmessage}
 </div>
 </c:if></p>
+
 					<div class="wrap-input100 validate-input m-b-16">
 						<select class="input100" name="roleName" required="required">
 							<option value="" selected="true" disabled="disabled">Login As</option>

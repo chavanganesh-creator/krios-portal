@@ -78,6 +78,7 @@ public class UserController {
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 
+
 	@PostMapping(value = "/checklogin")
 	public ModelAndView loginUser(@RequestParam(name = "username") String username,
 			@RequestParam(name = "password") String password, @ModelAttribute("roles") RolesBean roles, ModelAndView mv,
@@ -160,6 +161,8 @@ public class UserController {
 		return mv;
 	}
 
+
+
 	// method to show userForm
 	@RequestMapping(value = "/userForm")
 	public ModelAndView userForm(ModelAndView mv, Model m) {
@@ -236,6 +239,11 @@ public class UserController {
 	// email id from open handler
 	@RequestMapping("/forgotemailform")
 	public ModelAndView openEmailForm(ModelAndView mv) {
+		return mv;
+	}
+
+	@RequestMapping("/alert")
+	public ModelAndView alertbox(ModelAndView mv) {
 		return mv;
 	}
 
